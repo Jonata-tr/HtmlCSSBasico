@@ -1,0 +1,56 @@
+body, table {
+  background-color: #0C2233;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+h1 {
+  color:#61BDF6;
+  font-family: 'Montaga', serif;
+}
+h2, h3 {
+  color:#61BDF6;
+  font-family: 'Montagu Slab', serif;
+}
+hr {
+  border-color: #166678;
+  
+  border-style: dotted;
+  border-width: 7px;
+  border-bottom: none;
+  height: 0px;
+  width: 3%;
+}
+input, textarea {
+  background-color: #33313B;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+button {
+  border: 1px solid black;
+  background-image: linear-gradient(to right,lightcoral, #C06C84);
+  margin-top: 60px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  transition: 0.4s;
+}
+button:hover {
+  background-image: linear-gradient(to right,#C8B6E2,#9C9EFE);
+  border: 3px solid violet;  
+  color: white;
+}
+#sendButton {
+    margin-top: 10px;
+}
+#linkedin{
+    margin-top: 5px;
+    width: 190px;
+}
+#git {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 190px;
+}
