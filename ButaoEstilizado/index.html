@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            ---btn-neon: #d900ff;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #000;
+            font-family: sans-serif;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        #starter {
+            color: var(---btn-neon);
+            font-size: 4rem;
+            text-shadow: 0 0 1rem var(---btn-neon),
+                         0 0.2rem 1rem rgba(255, 255, 255, 0.731); 
+            box-shadow: 0 0 0.4em 0 var(---btn-neon),
+                        0 0 0.3em 0em inset var(---btn-neon);            
+            border-radius: 1rem;
+            padding: 20px 60px;
+            background-color: rgba(255, 255, 255, 0);
+            border: 2px solid var(---btn-neon);
+						cursor: pointer;
+            position: relative;
+        }
+        
+        #starter:before{
+            content:"";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            background-color: var(---btn-neon);
+            transform: translatey(120%) perspective(3rem) rotatex(30deg) scale(0.98, 0.65);
+            filter: blur(2rem);
+            opacity: 0.4;
+        } 
+    </style>
+</head>
+<body>
+    <button id="starter" >
+        <span>S</span>
+        <span>t</span>
+        <span>a</span>
+        <span>r</span>
+        <span>t</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </button>   
+</body>
+</html>

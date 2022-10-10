@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        ---btn-neon: #d900ff;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #000;
+        font-family: sans-serif;
+       
+      }
+
+			.starterSection {
+				display: grid;
+        place-items: center;
+        min-height: 100vh;
+			}
+
+      #starter {
+        color: var(---btn-neon);
+        font-size: 4rem;
+        text-shadow: 0 0 1rem var(---btn-neon),
+          0 0.2rem 1rem rgba(255, 255, 255, 0.731);
+        box-shadow: 0 0 0.4em 0 var(---btn-neon),
+          0 0 0.3em 0em inset var(---btn-neon);
+        border-radius: 1rem;
+        padding: 20px 60px;
+        background-color: rgba(255, 255, 255, 0);
+        border: 2px solid var(---btn-neon);
+        cursor: pointer;
+        position: relative;
+      }
+
+      #starter:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(---btn-neon);
+        transform: translatey(120%) perspective(3rem) rotatex(30deg)
+          scale(0.98, 0.65);
+        filter: blur(2rem);
+        opacity: 0.4;
+				transition: 1.2s;
+			}
+
+			#starter:after {
+				content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+				box-shadow: 0 0 6rem 2.4rem var(---btn-neon);
+				border-radius: 1rem;
+				opacity: 0;			
+				transition: 1s;	
+			}
+			
+			#starter:hover {
+				color: #000;
+				background-color: var(---btn-neon);
+				transition: background-color 500ms linear;
+			}
+
+			
+			#starter:hover:before {
+				opacity: 1;
+				filter: blur(3rem);
+			}
+			#starter:hover:after {
+				opacity: 1;
+			}
+
+      #video {
+        position: absolute;
+        top: 0;
+        margin: auto;
+        z-index: 9999;
+      }
+
+      #video {
+        position: absolute;
+        top: 8%;
+        left: 32%;
+        box-shadow: 0 0 3rem 1rem var(---btn-neon);
+      }
+
+      video {
+        width: 50rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="starterSection" class="stop">
+			<button id="starter" onclick="video()" class="stop">
+				<span>S</span>
+				<span>t</span>
+				<span>a</span>
+				<span>r</span>
+				<span>t</span>
+				<span>.</span>
+				<span>.</span>
+				<span>.</span>
+			</button>
+		</div>
+		<div class="hidden" id="video">
+		</div>
+
+		<script>
+			function video() {
+				var button = document.querySelector(".stop")
+				button.style.display = "none"
+        var video = document.getElementById("video")
+        var source = "<video autoplay loop play-inline class='hidden'>"
+        source += "<source src='WhatsApp Video 2022-10-09 at 19.16.08.mp4' type='video/mp4'></video>"
+        video.innerHTML = source
+				var show = document.getElementsByClassName("hidden")
+				for (i=0; i < show.length;i++){
+          show[i].style.display = "block"
+        }
+			}
+		</script>
+  </body>
+</html>
